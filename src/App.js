@@ -30,7 +30,7 @@ function App() {
 
 // Initialize Firebase
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const db=getFirestore();
 const coll=collection(db,'users');
 
@@ -50,7 +50,7 @@ const coll=collection(db,'users');
   {
     e.preventDefault();
     var d=document.getElementsByTagName("input");
-    if(d[0].value.trim()!="" && d[1].value.trim()!=""&& d[2].value.trim()!="")
+    if(d[0].value.trim()!=="" && d[1].value.trim()!==""&& d[2].value.trim()!=="")
     alert("Thanks for registering");
     addDoc(coll,
     {
@@ -145,21 +145,21 @@ const coll=collection(db,'users');
 
           <div className="logo_des"> 
             <div className="mobile-h"><h2>Temple of Consciousness Kasakkaranoor</h2></div>
-            <div><img className="veda" src={b}/></div>
+            <div><img className="veda" src={b} alt=''/></div>
             <div className="vedatxt">
               <h1>About WCSC</h1>
               <br/>
               <p classname="vtxt">In 1958 Vethathiri Maharishi founded the World Community Service Centre (WCSC), a non-profit registered society with a view to work towards World Peace through individual peace. As of today, about 400 Trusts and about 2300 Centres/ Sub Centres have been registered and affiliated to WCSC in India, and lakhs of people have benefited physically, mentally, socially and spiritually from the teachings and practices
               </p>
             </div>
-            <div><img className="build" src={f}/></div>
+            <div><img className="build" src={f} alt=''/></div>
             </div>
           </div>
 
           <div className="container" id="banner">
             <div className="banner">
               <div className="logo">
-                <img src={a} className="logo-img" />
+                <img src={a} className="logo-img" alt='' />
               </div>
 
               <div className="skytxt">
@@ -187,7 +187,7 @@ const coll=collection(db,'users');
                 <div>
                   <br/>
                   <p classname="card-data"><pre>{e[1]}</pre></p>
-                  <button className={(e[0]=="Events & Lectures")?"disable":""} onClick={click}>Register</button>
+                  <button className={(e[0]==="Events & Lectures")?"disable":""} onClick={click}>Register</button>
                 </div>
               </div>
             </div>
@@ -197,9 +197,9 @@ const coll=collection(db,'users');
 
           <h1 className="nost" id="memory">Memories</h1>
           <div className="carousel">
-            <img  className="image1" src={images[n]} />
-            <img  className="image" src={images[(n+1)%images.length]} />
-            <img  className="image2" src={images[(n+2)%images.length]} />
+            <img  className="image1" src={images[n]} alt='' />
+            <img  className="image" src={images[(n+1)%images.length]} alt=''/>
+            <img  className="image2" src={images[(n+2)%images.length]} alt='' />
           </div>
           <br/>
           <br/>
