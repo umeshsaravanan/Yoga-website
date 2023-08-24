@@ -19,14 +19,13 @@ function App() {
 
   const images=[c,d,e];
 
-  const firebaseConfig = 
-  {
-  apiKey: "AIzaSyCcEwCOKoxIpnEtjv7rvcnHNsX2tSGPGPw",
-  authDomain: "wcsc-df1e2.firebaseapp.com",
-  projectId: "wcsc-df1e2",
-  storageBucket: "wcsc-df1e2.appspot.com",
-  messagingSenderId: "137394445409",
-  appId: "1:137394445409:web:581295b0a167c7bba1de20"
+  const firebaseConfig = {
+    apiKey: "AIzaSyBINq3IxRLoHRN27cNPkM96Np72-2Muk2E",
+    authDomain: "yoga-website-9f2ab.firebaseapp.com",
+    projectId: "yoga-website-9f2ab",
+    storageBucket: "yoga-website-9f2ab.appspot.com",
+    messagingSenderId: "95808335932",
+    appId: "1:95808335932:web:7e9f4c3f19d0cd33f49339"
   };
 
 // Initialize Firebase
@@ -61,7 +60,7 @@ const coll=collection(db,'users');
     })
     .then(()=>{
       document.getElementsByTagName("form")[0].reset();
-      document.getElementsByClassName("App")[0].style.display="block";
+      document.getElementsByClassName("App")[0].style.display="initial";
       document.getElementsByClassName("form")[0].style.display="none";
     });
   }
@@ -71,6 +70,10 @@ const coll=collection(db,'users');
     document.getElementsByClassName("form")[0].style.display="flex";
   }
  
+  const handleClose = () => {
+    document.getElementsByClassName("App")[0].style.display="initial";
+    document.getElementsByClassName("form")[0].style.display="none";
+  }
  //useEffect for carousel
 
   useEffect(()=>
@@ -125,7 +128,9 @@ const coll=collection(db,'users');
 
         <div className="thanks">
           <p class="thk">Thanks For Registering Have a Great Day</p>
+          <button onClick={handleClose}>close</button>
         </div>
+
       </div>
 
       <div className="App">
