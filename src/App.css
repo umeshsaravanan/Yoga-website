@@ -259,11 +259,10 @@ pre{
   padding: 10px !important;
 }
 
-.image:hover{
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.8);
+.image:hover,.image1:hover,.image2:hover{
+  box-shadow: 0 4px 16px 0 rgba(252, 250, 250, 0.8);
+  transition-duration: .3s;
 }
-.image1:hover,.image2:hover{
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.8);}
 
 .carousel{
 display: flex;
@@ -311,7 +310,7 @@ button:hover {
   display: flex;
   margin-top: 50px;
   justify-content: center;
-  background-color: #3700ff;
+  background-color: black;
   color: whitesmoke;
   margin-top: 0;
   height: auto;
